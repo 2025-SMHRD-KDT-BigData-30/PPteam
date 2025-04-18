@@ -78,6 +78,14 @@ npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/interaction
 
 !pip install eunjeon
 
+!pip install flask
+
+!pip install flask-cors
+
+!pip install pillow
+
+!pip install pytesseract
+
 
 # NLTK 데이터 다운로드 (최초 실행 시 필요)
 
