@@ -32,7 +32,6 @@ React + Spring MVC + Flask를 통합하여 만든 웹 기반 학습 지원 플�
 -  마이페이지, 통계, 퀴즈 페이지 완성
 -  Spring MVC, MyBatis, MySQL 연동
 -  React 정적 파일 자동 빌드/복사 설정
-## 마크다운 문법 (https://backendcode.tistory.com/165)
 
 
 ## 기술 스택
