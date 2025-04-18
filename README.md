@@ -47,26 +47,38 @@ React + Spring MVC + Flask를 통합하여 만든 웹 기반 학습 지원 플�
 
 
 #### nivo 차트
+
 npm install @nivo/pie @nivo/core d3-shape --force
 
+
 + react 버전 조정필요
+ 
 npm install react@18.3.1 react-dom@18.3.1
 
 "react": "^18.3.1",
+
 "react-dom": "^18.3.1",
 
 
 
 #### fullcalendar 라이브러리
+
 npm install axios react-router-dom react-modal react-icons
+
 npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/interaction
 
 
 #### 플라스크 서버 구축 
+
 !pip install scikit-learn
+
 !pip install Flask flask-cors scikit-learn nltk
+
 !pip install nltk
+
 !pip install eunjeon
 
+
 # NLTK 데이터 다운로드 (최초 실행 시 필요)
+
 nltk.download('stopwords')
