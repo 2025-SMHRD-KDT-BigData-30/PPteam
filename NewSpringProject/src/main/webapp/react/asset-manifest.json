@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a0d11261.css",
+    "main.js": "/static/js/main.1d9fb4c8.js",
+    "static/js/453.f22dc0cd.chunk.js": "/static/js/453.f22dc0cd.chunk.js",
+    "static/media/MakePlanD.png": "/static/media/MakePlanD.6d5aab6731cd7ed82463.png",
+    "index.html": "/index.html",
+    "main.a0d11261.css.map": "/static/css/main.a0d11261.css.map",
+    "main.1d9fb4c8.js.map": "/static/js/main.1d9fb4c8.js.map",
+    "453.f22dc0cd.chunk.js.map": "/static/js/453.f22dc0cd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0d11261.css",
+    "static/js/main.1d9fb4c8.js"
+  ]
+}

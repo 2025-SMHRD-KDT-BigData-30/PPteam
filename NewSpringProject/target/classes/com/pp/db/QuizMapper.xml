@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pp.db.QuizMapper">
+
+  <select id="selectQuizByKeywords" parameterType="map" resultType="com.pp.model.QuizDTO">
+    SELECT * FROM tb_quiz
+    WHERE subject_no = #{subjectNo}
+    <if test="keywords != null and keywords.size > 0">
+      AND (
+        <foreach collection="keywords" item="kw" separator="OR">
+          JSON_CONTAINS(keyword_list, JSON_QUOTE(#{kw}))
+        </foreach>
+      )
+    </if>
+  </select>
+
+  <select id="findQuizById" parameterType="long" resultType="com.pp.model.QuizDTO">
+    SELECT * FROM tb_quiz WHERE quiz_idx = #{quizIdx}
+  </select>
+
+  <insert id="insertQuiz" parameterType="com.pp.model.QuizDTO">
+    INSERT INTO tb_quiz (
+      question, question_detail, choice_1, choice_2, choice_3, choice_4, answer, explanation
+    ) VALUES (
+      #{question}, #{questionDetail}, #{choice_1}, #{choice_2}, #{choice_3}, #{choice_4}, #{answer}, #{explanation}
+    )
+  </insert>
+
+</mapper>

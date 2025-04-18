@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pp.db.StudyMapper">
+
+	<insert id="saveStudyTime"
+		parameterType="com.pp.model.StudyTimeDTO">
+		INSERT INTO tb_study_time (
+		user_id, st_tm, ed_tm, st_duration
+		) VALUES (
+		#{user_id}, #{st_tm}, #{ed_tm}, #{st_duration}
+		)
+	</insert>
+
+	<delete id="deleteUserStudyTime" parameterType="String">
+		DELETE FROM tb_study_time WHERE user_id = #{user_id}
+	</delete>
+	
+	
+
+</mapper>

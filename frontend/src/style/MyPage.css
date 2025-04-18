@@ -1,0 +1,153 @@
+.mypage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 0px;
+  gap: 100px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid #ccc;
+}
+
+.nickname {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 300px;
+}
+
+.info-btn {
+  padding: 14px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.withdraw-btn {
+  padding: 14px;
+  font-size: 15px;
+  border: 1px solid red;
+  background-color: white;
+  color: red;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 모달 스타일 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  width: 350px;
+  background-color: white;
+  padding: 0px 30px 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.modal-top h3 {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.close-btn {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-box input {
+  width: 92.5%;
+  padding: 12px;
+  margin: 16px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ccc;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* 회원탈퇴 모달 버튼 영역 정렬 */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* 예 / 아니오 버튼 크기 통일 + 스타일 */
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 각 버튼 색상 다르게 */
+.confirm-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f1f1f1;
+  color: #333;
+}

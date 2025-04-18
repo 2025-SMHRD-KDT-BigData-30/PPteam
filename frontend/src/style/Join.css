@@ -1,0 +1,118 @@
+.join-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.join-title {
+    font-size: 24px;
+    margin-bottom: 45px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.join-box input,
+.join-box select {
+    display: block;
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
+}
+
+.check-btn {
+    white-space: nowrap;
+    padding: 12px 16px;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.birth-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.birth-wrap select {
+    flex: 1;
+}
+
+.join-btn-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.join-btn {
+    padding: 10px 16px;
+    min-width: 100px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.join-btn.submit {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.join-btn.cancel {
+    background-color: #fff176;
+    color: black;
+}
+
+/* 아이디 입력창에 중복확인 버튼 넣기 */
+.input-id-wrap {
+    position: relative;
+    width: 95%;
+    margin-bottom: 16px;
+}
+
+.input-id-wrap input {
+    width: 105%;
+    padding: 12px;
+    padding-right: 95px;
+    /* 버튼 공간  */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.input-id-wrap .check-btn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 14px;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}

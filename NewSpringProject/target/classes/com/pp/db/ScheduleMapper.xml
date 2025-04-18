@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pp.db.ScheduleMapper">
+
+	<!-- 일정 등록 -->
+	<insert id="insertSchedule"
+		parameterType="com.pp.model.ScheduleDTO" useGeneratedKeys="true"
+		keyProperty="sche_idx">
+		INSERT INTO tb_schedule (
+		user_id, sche_title, st_dt, ed_dt, sche_color
+		) VALUES (
+		#{user_id}, #{sche_title}, #{st_dt}, #{ed_dt}, #{sche_color}
+		)
+	</insert>
+	
+	<!-- 일정 조회 -->
+	<select id="getScheduleList"
+		resultType="com.pp.model.ScheduleDTO" parameterType="String">
+		SELECT * FROM
+		tb_schedule WHERE user_id = #{user_id}
+	</select>
+
+	<!-- 일정 수정 -->
+	<update id="updateSchedule"
+		parameterType="com.pp.model.ScheduleDTO">
+		UPDATE tb_schedule
+		SET sche_title = #{sche_title},
+		st_dt = #{st_dt},
+		ed_dt = #{ed_dt},
+		sche_color = #{sche_color}
+		WHERE sche_idx = #{sche_idx}
+	</update>
+
+	<!-- 일정 삭제 -->
+	<delete id="deleteSchedule" parameterType="int">
+		DELETE FROM tb_schedule
+		WHERE sche_idx = #{sche_idx}
+	</delete>
+
+
+
+</mapper>

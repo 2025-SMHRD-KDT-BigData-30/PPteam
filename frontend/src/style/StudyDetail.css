@@ -1,0 +1,104 @@
+.detail-container {
+    display: flex;
+    height: 100vh;
+    margin-left: 0px;
+    padding: 30px;
+    gap: 150px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-box {
+    flex: none;
+    width: 800px;
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+}
+
+.upload-btn {
+    align-self: flex-start;
+    background-color: #a78bfa;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.study-content {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.keyword-box {
+    flex: none;
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+}
+
+.back-arrow {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.upload-file-direct {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.image-text-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.ocr-image {
+    max-width: 45%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.ocr-text-box {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+.subject-select-box {
+    margin-top: 0px;
+}
+
+.preview-image {
+    max-width: 60%;       /* ✅ 적당한 너비 */
+    max-height: 500px;
+    margin-top: 16px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

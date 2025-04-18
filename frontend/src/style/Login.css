@@ -1,0 +1,135 @@
+.login-container {
+  max-width: 360px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 44px;
+  margin-top: -10px;
+}
+
+.login-box {
+  border: 1px solid #ddd;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.login-input {
+  display: block;
+  width: 281px;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-btn {
+  width: 310px;
+  padding: 12px;
+  background: black;
+  color: white;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.login-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-divider {
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+  padding-top: 10px;
+  font-size: 14px;
+  color: gray;
+}
+
+.signup-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 18px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+/* 비밀번호,아이디 찾기 모달 스타일 */
+.login-modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 114%;
+height: 100%;
+background-color: rgba(20, 20, 20, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.login-modal-box {
+width: 350px;
+background-color: white;
+padding: 0px 30px 40px 30px;
+border-radius: 14px;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+position: relative;
+}
+
+.login-modal-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 18px;
+}
+
+.login-modal-top h3 {
+font-size: 20px;
+font-weight: bold;
+}
+
+.login-close-btn {
+font-size: 22px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.login-modal-box input {
+width: 92.5%;
+padding: 12px;
+margin: 16px 0;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+
+.login-confirm-btn {
+width: 100%;
+padding: 12px;
+background-color: #ccc;
+font-weight: bold;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+com\pp\db\MemberMapper.class
+com\pp\config\SimpleCORSFilter.class
+com\pp\db\OcrMapper.class
+com\pp\controller\ScheduleRestController.class
+com\pp\controller\HomeController.class
+com\pp\controller\MultipartInputStreamFileResource.class
+com\pp\controller\OcrRestController.class
+com\pp\model\OcrResult.class
+com\pp\db\ScheduleMapper.class
+com\pp\model\MemberDTO.class
+com\pp\controller\KeywordController.class
+com\pp\model\OcrDTO.class
+com\pp\controller\MemberRestController.class
+com\pp\model\ScheduleDTO.class

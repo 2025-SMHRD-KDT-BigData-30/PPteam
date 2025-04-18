@@ -1,0 +1,39 @@
+.modal-input {
+    width: 93%;
+    padding: 6px;
+    margin-bottom: 12px;
+}
+
+.modal-btn-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.modal-btn.save {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+}
+
+.modal-btn.delete {
+    background-color: white;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+.calendar-wrap {
+    padding: 15px 125px;
+    height: 912px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}

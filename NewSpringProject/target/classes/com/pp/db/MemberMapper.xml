@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pp.db.MemberMapper">
+
+	<!-- 회원가입 -->
+	<insert id="insertMember" parameterType="com.pp.model.MemberDTO">
+		INSERT INTO tb_user (
+		user_id, user_pw, user_name, user_nick,
+		user_email, user_birthdate,
+		user_role
+		)
+		VALUES (
+		#{user_id}, #{user_pw}, #{user_name}, #{user_nick},
+		#{user_email}, #{user_birthdate}, #{user_role}
+		)
+	</insert>
+
+
+	<!-- 로그인 (아이디 + 비밀번호) -->
+	<select id="login" parameterType="com.pp.model.MemberDTO"
+		resultType="com.pp.model.MemberDTO">
+		SELECT * FROM tb_user
+		WHERE user_id = #{user_id}
+		AND user_pw
+		= #{user_pw}
+	</select>
+
+	<!-- 아이디 중복 체크 -->
+	<select id="checkId" parameterType="String"
+		resultType="com.pp.model.MemberDTO">
+		SELECT * FROM tb_user WHERE user_id = #{user_id}
+	</select>
+
+	<!-- 이미지 변경 -->
+	<update id="updateProfileImage" parameterType="map">
+		UPDATE tb_user
+		SET
+		user_img = #{user_img}
+		WHERE user_id = #{user_id}
+	</update>
+
+	<!-- 아이디 찾기 -->
+	<select id="findUserId" resultType="string">
+		SELECT user_id
+		FROM tb_user
+		WHERE user_name = #{user_name}
+		AND user_email = #{user_email}
+	</select>
+
+	<!-- 비밀번호 찾기 -->
+	<select id="findPassword" resultType="com.pp.model.MemberDTO">
+		SELECT * FROM tb_user
+		WHERE
+		user_id = #{user_id}
+		AND user_name = #{user_name}
+		AND user_email =
+		#{user_email}
+	</select>
+
+	<!-- 비밀번호 변경 -->
+	<update id="updateUserInfo"
+		parameterType="com.pp.model.MemberDTO">
+		UPDATE tb_user
+		SET user_pw = #{user_pw}
+		WHERE user_id =
+		#{user_id}
+	</update>
+
+	<!-- 닉네임 변경 -->
+	<update id="updateUserNick" parameterType="map">
+		UPDATE tb_user
+		SET
+		user_nick = #{user_nick}
+		WHERE user_id = #{user_id}
+	</update>
+
+
+	<!-- 타이머 기록 삭제 -->
+	<delete id="deleteUserStudyTime" parameterType="String">
+		DELETE FROM
+		tb_study_time WHERE user_id = #{user_id}
+	</delete>
+
+	<!-- 스케줄 삭제 -->
+	<delete id="deleteUserSchedules" parameterType="string">
+		DELETE FROM
+		tb_schedule WHERE user_id = #{user_id}
+	</delete>
+
+	<!-- 회원 탈퇴 -->
+	<delete id="deleteUser" parameterType="string">
+		DELETE FROM tb_user WHERE
+		user_id = #{user_id}
+	</delete>
+
+	
+	<!-- 유저의 ocr기록 삭제 -->
+	<delete id="deleteUserOcr" parameterType="string">
+		DELETE FROM tb_ocr WHERE user_id = #{user_id}
+	</delete>
+
+
+
+
+
+
+
+
+
+</mapper>

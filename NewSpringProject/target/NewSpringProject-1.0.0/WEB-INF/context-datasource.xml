@@ -1,0 +1,62 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+         http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+         http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/data/jpa https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+
+
+	<context:property-placeholder
+		location="classpath:flask.properties" />
+	<context:component-scan base-package="com.pp" />
+
+	<!-- ✅ JPA Repository 사용을 위한 설정 -->
+	<!-- <jpa:repositories base-package="com.pp.repository" /> -->
+
+	<!-- ✅ JPA Entity Manager 설정 -->
+	<!-- <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="packagesToScan" 
+		value="com.pp.entity" /> 엔티티 패키지 <property name="jpaVendorAdapter"> <bean 
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" /> </property> 
+		</bean> -->
+
+	<!-- ✅ 트랜잭션 설정 -->
+	<!-- <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"> 
+		<property name="entityManagerFactory" ref="entityManagerFactory" /> </bean> 
+		<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver" 
+		/> -->
+
+	<!-- ✅ HikariCP 설정 -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="jdbcUrl"
+			value="jdbc:mysql://project-db-cgi.smhrd.com:3307/MPD" />
+		<property name="username" value="MPD" />
+		<property name="password" value="15987" />
+	</bean>
+
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+
+
+
+	<!-- ✅ MyBatis 설정 유지 -->
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations"
+			value="classpath:/com/pp/db/*.xml" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.pp.db" />
+	</bean>
+</beans>
