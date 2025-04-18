@@ -86,6 +86,6 @@ npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/interaction
 !pip install pytesseract
 
 
-# NLTK 데이터 다운로드 (최초 실행 시 필요)
+#### NLTK 데이터 다운로드 (최초 실행 시 필요)
 
 nltk.download('stopwords')
