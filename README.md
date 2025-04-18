@@ -66,3 +66,73 @@ npm install @fullcalendar/react @fullcalendar/daygrid @fullcalendar/interaction
 # Nivo 차트 & React 버전 호환
 npm install @nivo/pie @nivo/core d3-shape --force
 npm install react@18.3.1 react-dom@18.3.1
+```
+
+> `package.json` 예시:
+```json
+"react": "^18.3.1",
+"react-dom": "^18.3.1",
+```
+
+---
+
+### 🔸 Flask 서버 구축
+
+```bash
+pip install Flask flask-cors pillow pytesseract eunjeon nltk scikit-learn
+```
+
+📌 NLTK 최초 실행 시:
+```python
+import nltk
+nltk.download('stopwords')
+```
+
+---
+
+## 📁 프로젝트 구조
+
+```
+FinalProject/
+├── frontend/                     # React 프로젝트
+│   └── build/                    # 빌드 결과 (Spring에 자동 복사됨)
+├── flask_server.py               # OCR 처리 서버 (Flask)
+├── NewSpringProject/             # Spring MVC + MyBatis 기반 백엔드
+│   └── src/main/webapp/react/   # React 정적 파일 복사 위치
+└── README.md
+```
+
+---
+
+## 🚀 실행 순서
+
+### 1. React 빌드 및 자동 복사
+```bash
+cd frontend
+npm install
+npm run build
+```
+
+### 2. Flask OCR 서버 실행
+```bash
+python flask_server.py
+```
+
+### 3. Spring 서버 실행 (Tomcat)
+- Eclipse > Run As > Run on Server
+- 접속 주소: [http://localhost:8084](http://localhost:8084)
+
+---
+
+## 💬 챌린지 포인트
+
+| 항목            | 내용                         |
+|-----------------|------------------------------|
+| 외부 API        | Naver CLOVA OCR 사용         |
+| 다크모드        | 프론트 커스터마이징 예정     |
+| SNS 로그인  |    간편 로그인              |
+
+---
+
+
+
