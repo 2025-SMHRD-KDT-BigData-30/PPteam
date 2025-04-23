@@ -23,7 +23,7 @@ React + Spring MVC + Flask를 통합하여 만든 웹 기반 학습 지원 플�
 - 📅 **FullCalendar 기반 일정 관리**
 - ❓ **퀴즈 추천 시스템**
 - 🌐 **Spring MVC + React + Flask 통합**
-- 🌙 **다크모드 / 외부 API / SNS 로그인 도전**
+- 🌙 **다크모드 / 외부 API / SNS 로그인**
 
 ---
 
@@ -36,7 +36,7 @@ React + Spring MVC + Flask를 통합하여 만든 웹 기반 학습 지원 플�
 - ✅ 사용자 통계 → Nivo Pie 차트로 시각화
 - ✅ 마이페이지 기능, 통계, 퀴즈 페이지 완성
 - ✅ React build 자동 Spring 연동 처리
-- ✅ MyBatis, MySQL 완전 연동
+- ✅ MyBatis, MySQL 연동
 
 ---
 
